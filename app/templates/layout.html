@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>GreenYug</title>
+	<title>{{ title }}</title>
 	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}"/>
 
 	<!-- for-mobile-apps -->
@@ -34,12 +34,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			}
 		}
 
-		.nav-item:hover{
-			background-color:green;
-		
-			border-radius:10px;
-		}
-		
 		@media (min-width: 1200px) {
 			html {
 				font-size: 2rem;
@@ -150,7 +144,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	<style>
 		header {
-			background-color: rgb(255, 230, 205);
+			background-color: rgba(30, 30, 30, 1);
 			margin-top: 0rem;
 			display: block;
 
@@ -161,10 +155,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 
 	<!-- Navigation -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light static-top" style="background-color: rgb(255, 230, 205);">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" style="background-color: #1C00ff00;">
 		<div class="container">
-			<a class="navbar-brand" href="{{ url_for('homepage') }}">
-				<img src="static\images\plant_logo.png" style="width: 150px; " alt="">
+			<a class="navbar-brand" href="{{ url_for('home') }}">
+				<img src="{{ url_for('static', filename='images/logo.jpg') }}" style="width: 90px; height: 55px" alt="">
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
 				aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -173,7 +167,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="{{ url_for('homepage') }}">Home
+						<a class="nav-link" href="{{ url_for('home') }}">Home
 							<span class="sr-only">(current)</span>
 						</a>
 					</li>
@@ -185,12 +179,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="{{ url_for('disease_prediction') }}">Disease</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="{{ url_for('blog') }}">Blog</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="{{ url_for('weather') }}">Know your weather</a>
 					</li>
 				</ul>
 			</div>
@@ -208,7 +196,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!-- logo -->
 			<h2 class="logo2 text-center">
 				<a href="{{ url_for('home') }}">
-					GreenYug
+					Harvestify
 				</a>
 			</h2>
 			<!-- //logo -->
@@ -226,6 +214,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<p class="text-da">An Environmental Intelligence Startup<br> </p>
 			</div>
 			<p class="homelogo">
+			<p>Made with ❤️ by Atharva</p>
+			<p>&copy; Copyright 2021 Atharva Ingle</p>
 			
 		</div>
 	</footer>
